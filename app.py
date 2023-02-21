@@ -17,6 +17,5 @@ col_names=["Col1","Col2"]
 df2.columns=col_names
 row_names=["R1","R2"]
 df2.index=row_names
-st.markdown(hide_table_row_index, unsafe_allow_html=True)
-st.table(df2)
+st.table(df2,index=False)
 st.write(df2)
