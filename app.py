@@ -15,5 +15,6 @@ def load_data(sheets_url):
 df2 = load_data(st.secrets["public_gsheets_url"])
 col_names=["Col1","Col2"]
 df2.columns=col_names
-st.write(df2)
 df2.style.hide_index()
+st.write(df2)
+
