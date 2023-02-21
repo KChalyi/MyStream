@@ -10,9 +10,9 @@ hide_table_row_index = """
             tbody th {display:none}
             </style>
             """
-
+df = load_data(st.secrets["public_gsheets_url"])
 # Inject CSS with Markdown
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 # Display a static table
-st.table(df2)
+st.table(df)
