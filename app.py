@@ -9,10 +9,10 @@ y=st.slider("Select an integer y",0,10,1)
 df=pd.DataFrame({"x":[x],"y":[y],"x+y":[x+y]},index=["addition row"])
 st.write(df)
 #@st.cache_data(ttl=600)
-def load_data(sheets_url):
+def load_data(sheets_url,index=False):
     csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
     return pd.read_csv(csv_url)
-df2 = load_data(st.secrets["public_gsheets_url"],index=False)
+df2 = load_data(st.secrets["public_gsheets_url"])
 col_names=["Col1","Col2"]
 df2.columns=col_names
 st.write(df2)
