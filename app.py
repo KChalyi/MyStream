@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 
 st.title("Расчёт падения напряжения")
-st.write(df2)
 
 # CSS to inject contained in a string
 hide_table_row_index = """
