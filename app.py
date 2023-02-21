@@ -13,10 +13,10 @@ def load_data(sheets_url):
     csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
     return pd.read_csv(csv_url)
 df2 = load_data(st.secrets["public_gsheets_url"])
-col_names=["Col1","Col2"]
-df2.columns=col_names
-row_names=["R1","R2"]
-df2.index=row_names
+#col_names=["Col1","Col2"]
+#df2.columns=col_names
+#row_names=["R1","R2"]
+#df2.index=row_names
 st.write(df2)
 
 # CSS to inject contained in a string
