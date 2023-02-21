@@ -18,4 +18,5 @@ df2.columns=col_names
 row_names=["R1","R2"]
 df2.index=row_names
 st.write(df2)
-
+df3 = df2.to_string(index=False)
+print(df3)
