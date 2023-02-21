@@ -10,7 +10,11 @@ hide_table_row_index = """
             tbody th {display:none}
             </style>
             """
+def load_data(sheets_url):
+    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+    return pd.read_csv(csv_url)
 df = load_data(st.secrets["public_gsheets_url"])
+
 # Inject CSS with Markdown
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
