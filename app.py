@@ -17,5 +17,4 @@ col_names=["Col1","Col2"]
 df2.columns=col_names
 row_names=["R1","R2"]
 df2.index=row_names
-st.table(df2,index=False)
 st.write(df2)
