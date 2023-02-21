@@ -14,4 +14,6 @@ def load_data(sheets_url):
     return pd.read_csv(csv_url)
 
 df2 = load_data(st.secrets["public_gsheets_url"])
+with st.columns(2)
+    st.header("Число")
 st.write(df2)
